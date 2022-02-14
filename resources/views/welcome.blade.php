@@ -17,12 +17,18 @@
         <style>
             body {
                 font-family: 'Nunito', sans-serif;
+                color: white;
             }
         </style>
     </head>
     <body class="antialiased">
         <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
-            @if (Route::has('login'))
+            <div class="row">
+                <div class="col-12"><h2> Satriya Rifki Pangestu <br>Kelas : TI-2H  <br>NIM : 2041720218 </h2></div>
+        </div>
+            
+            
+            <!-- @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                     @auth
                         <a href="{{ url('/home') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Home</a>
@@ -126,7 +132,7 @@
                         Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </body>
 </html>
