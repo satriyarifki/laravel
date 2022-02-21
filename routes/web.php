@@ -39,8 +39,49 @@ use App\Http\Controllers\ArticlesController;
 // Route::get('/articles/{id}', [PageController::class, 'articles']);
 
 
-#Praktikum 2 - Single Action Controller
-Route::get('/', [HomeController::class, 'index']);
-Route::get('/about', [AboutController::class, 'index']);
-Route::get('/articles/{id}', [ArticlesController::class, 'index']);
+// #Praktikum 2 - Single Action Controller
+// Route::get('/', [HomeController::class, 'index']);
+// Route::get('/about', [AboutController::class, 'index']);
+// Route::get('/articles/{id}', [ArticlesController::class, 'index']);
+
+#Praktikum 3 
+Route::get('/', function () {
+    return 'Selamat Datang di Educa Studio';
+});
+Route::prefix('category')->group(function () {
+    Route::get('/marbel-edu-games', function () {
+        return 'Menampilkan Edu Games';
+    });
+    Route::get('/marbel-and-friends-kids-games', function () {
+        return 'Menampilkan kids games';
+    });
+    Route::get('/riri-story-books', function () {
+        return 'Menampilkan story books';
+    });
+    Route::get('/kolak-kids-songs', function () {
+        return 'Menampilkan kids Song';
+    });
+});
+Route::prefix('news')->group(function () {
+    Route::get('/{param}', function ($param) {
+        return ' Menampilkan News terkait '.$param;
+    });
+    Route::get('/educa-studio-berbagi-untuk-warga-sekitar-terdampak-covid-19', function () {
+        return 'Menampilkan News Terkait EducaBerbagi';
+    });
+});
+Route::prefix('program')->group(function () {
+    Route::get('/karir', function () {
+        return 'Menampilkan Program Karir';
+    });
+    Route::get('/magang', function () {
+        return 'Menampilkan Program Magang';
+    });
+    Route::get('/kunjungan industri', function () {
+        return 'Menampilkan Program Kunjungan';
+    });
+});
+Route::get('/about-us', function () {
+    return 'Menampilkan keterangan terkait company Educa Studio';
+});
 
