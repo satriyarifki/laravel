@@ -85,3 +85,7 @@ Route::get('/about-us', function () {
     return 'Menampilkan keterangan terkait company Educa Studio';
 });
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
