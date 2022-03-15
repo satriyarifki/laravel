@@ -2,13 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Http\Request;
 
 class IndexCont extends Controller
 {
     //
     public function index(){
-        return view('index', ['name' => 'Satriya']);
+        return view('index')
+                    ->with('name','Satriya')
+                    ->with('post1',Post::post1())
+                    ->with('post2',Post::post2())
+                    ->with('post3',Post::post3())
+                    ->with('post4',Post::post4());
     }
     public function about(){
         return view('about', ['name' => 'Satriya']);

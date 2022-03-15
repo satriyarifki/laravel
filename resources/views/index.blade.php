@@ -149,29 +149,29 @@
                 <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 margintop">
                     <div class="brand-box">
                         <i><img src="assets/icon/p1.png"/></i>
-                        <h3>Jane Lauren Design Chair</h3>
-                        <span>$80.00</span>
+                        <h3>{{ $post1->title }}</h3>
+                        <span>${{ $post1->price }}</span>
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 margintop">
                     <div class="brand-box">
                         <i><img src="assets/icon/p2.png"/></i>
-                        <h3>Jane Lauren Design Chair</h3>
-                        <span>$80.00</span>
+                        <h3>{{ $post2->title }}</h3>
+                        <span>${{ $post2->price }}</span>
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
                     <div class="brand-box">
                         <i><img src="assets/icon/p3.png"/></i>
-                        <h3>Jane Lauren Design Chair</h3>
-                        <span>$80.00</span>
+                        <h3>{{ $post3->title }}</h3>
+                        <span>${{ $post3->price }}</span>
                     </div>
                 </div>
                 <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
                     <div class="brand-box">
                         <i><img src="assets/icon/p4.png"/></i>
-                        <h3>Jane Lauren Design Chair</h3>
-                        <span>$80.00</span>
+                        <h3>{{ $post4->title }}</h3>
+                        <span>${{ $post4->price }}</span>
                     </div>
                 </div>
             </div>

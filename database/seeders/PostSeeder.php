@@ -34,7 +34,7 @@ class PostSeeder extends Seeder
         ]);
         DB::table('post')->insert([
             'title' => 'Meja antik',
-            'price' => '30',
+            'price' => '90',
             'image' => '',
             'content' => 'Meja dengan laci yang terukir'
         ]);
