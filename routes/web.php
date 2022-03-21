@@ -22,12 +22,9 @@ use App\Http\Controllers\IndexCont;
 //     return view('welcome');
 // });
 
-Route::get('/', [IndexCont::class, 'index']);
+Route::get('/', [HomeController::class, 'index']);
 Route::get('/home', [HomeController::class, 'index']);
 Auth::routes();
-Route::post('/login', function () {
-    return view('auth/login');
-});
 Route::get('/about', [IndexCont::class, 'about']);
 Route::get('/blog', [IndexCont::class, 'blog']);
 Route::get('/product', [IndexCont::class, 'product']);
