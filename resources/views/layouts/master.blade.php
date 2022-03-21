@@ -29,6 +29,17 @@
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+      <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <!-- Scripts -->
+    <script src="{{ asset('js/app.js') }}" defer></script>
+
 </head>
 <!-- body -->
 
@@ -82,8 +93,10 @@
                                     </div>
                                 </div>
                             </div>
+                            
                             <div class="col-lg-9">
                                 <div class="right_header_info">
+                                    
                                     <ul>
                                         <li>
                                             <a href="#"><img style="margin-right: 15px;" src="assets/icon/1.png" alt="#" /></a>
