@@ -23,7 +23,7 @@ use App\Http\Controllers\IndexCont;
 // });
 
 Route::get('/', [HomeController::class, 'index']);
-Route::get('/home', [HomeController::class, 'index']);
+// Route::get('/home', [HomeController::class, 'index']);
 Auth::routes();
 Route::get('/about', [IndexCont::class, 'about']);
 Route::get('/blog', [IndexCont::class, 'blog']);
