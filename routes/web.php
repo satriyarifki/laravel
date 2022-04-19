@@ -5,7 +5,9 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\IndexCont;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +28,7 @@ Route::get('/', [HomeController::class, 'index']);
 // Route::get('/home', [HomeController::class, 'index']);
 Auth::routes();
 Route::resource('articles', ArticleController::class);
+Route::get('cetak_pdf', [PostController::class, 'cetak_pdf'])->name('cetak_pdf');
 Route::get('/about', [IndexCont::class, 'about']);
 Route::get('/blog', [IndexCont::class, 'blog']);
 Route::get('/product', [IndexCont::class, 'product']);

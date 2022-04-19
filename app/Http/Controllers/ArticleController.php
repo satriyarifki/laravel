@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Article;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Barryvdh\DomPDF\Facade\PDF;
 
 class ArticleController extends Controller
 {
@@ -110,5 +111,19 @@ class ArticleController extends Controller
     public function destroy(Article $article)
     {
         //
+    }
+
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\Models\Article  $article
+     * @return \Illuminate\Http\Response
+     */
+    public function cetak_pdf()
+    {
+        $articles = Article::all();
+        $pdf = PDF::listView('articles.articles_pdf', ['articles'=>$articles]);
+        return $pdf->stream();
     }
 }
